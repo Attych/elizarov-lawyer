@@ -11,18 +11,64 @@ body {
 /* Заголовок Hero */
 .hero-big-title {
   font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 4rem;
+  font-weight: 500;
   color: #333;
   line-height: 1.2;
   padding-top: calc(var(--navbar-height) + 20px);
 }
 
 .hero-big-title .highlight {
-  font-weight: 600; /* Просто жирнее */
-  color: #ffffff;
+  font-weight: 600;
+  color: #111;
+}
+.contact-button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  opacity: 0; /* Скрыта в начале */
+  transform: translateY(20px);
+  transition: all 0.8s ease;
 }
 
+/* Когда появляется */
+.contact-button.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Сама кнопка */
+.contact-button .btn {
+  font-family: "Playfair Display", serif;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  border: 2px solid;
+  border-radius: 30px;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  animation: gentlePulse 5s ease-in-out infinite;
+}
+
+/* Наведение */
+.contact-button .btn:hover {
+  background-color: #34495e;
+  color: white;
+}
+
+/* Анимация пульсации */
+@keyframes gentlePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(52, 73, 94, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 5px rgba(52, 73, 94, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(52, 73, 94, 0.4);
+  }
+}
 
 /* Блок About Me */
 .about-block {
@@ -61,6 +107,8 @@ body {
 }
 
 .navbar {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -70,6 +118,12 @@ body {
   z-index: 1000;
   transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 #fixedNavbar {
@@ -101,13 +155,144 @@ body {
 
 .hero-wrapper {
   max-width: 550px; /* Максимальная ширина фона */
-  overflow-wrap: break-word;
-  background: #34495e; /* светлый прозрачный фон */
-  color: #fdfdfd; 
+  
+  background: rgba(0, 0, 0, 0.05); /* светлый прозрачный фон */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: inline-block;
   padding: 3rem 4rem;
   border-radius: 12px;
   max-width: 100%;
   margin: 0 auto; /* по центру */
+}
+
+/* Блок цитаты */
+.quote {
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: #444;
+
+  padding-left: 1rem;
+  margin-top: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInQuote 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Иконка кавычки */
+.quote-icon {
+  position: absolute;
+  left: -1.5rem;
+  top: -0.5rem;
+  font-size: 3rem;
+  color: #bbb;
+  opacity: 0.7;
+}
+
+/* Текст цитаты */
+.quote-text {
+  display: inline-block;
+}
+
+/* Анимация появления */
+@keyframes fadeInQuote {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#stats {
+  background: #f9f9f9;
+}
+
+.counter-box {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.counter-box:hover {
+  transform: scale(1.05);
+}
+
+.counter {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #34495e;
+}
+
+.counter-title {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#stats {
+  font-family: "Playfair Display", serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  padding: 50px 0;
+}
+
+
+.counter-box {
+  background: white;
+  padding: 0;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 45vh; /* занимают 70% высоты */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight {
+  font-weight: 600; /* Просто жирнее */
+  color: #111; /* Чуть темнее */
+}
+
+.counter-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Верхняя часть с цифрой */
+.counter-header {
+  background: #34495e;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  
+}
+
+/* Нижняя часть с текстом */
+.counter-body {
+  padding: 40px 30px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.counter-title {
+  font-size: 2rem;
+  color: #555;
+  line-height: 1.5;
 }
