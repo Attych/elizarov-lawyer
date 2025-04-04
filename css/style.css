@@ -47,7 +47,43 @@ body {
 
 /* Фото */
 .hero-photo {
-  height: 100vh;
+  height: 95vh;
   width: auto;
   object-fit: contain;
+  position: relative;
+  z-index: 1010; /* Фото поверх меню */
 }
+
+:root {
+  --navbar-height: 75px;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  background: transparent;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#fixedNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 1020;
+}
+
+#fixedNavbar.show-navbar {
+  transform: translateY(0);
+  opacity: 1;
+}
+
