@@ -1,0 +1,53 @@
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+.about-section {
+  background-color: #fdfdfd; /* слоновая кость */
+}
+
+/* Заголовок Hero */
+.hero-big-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.2;
+}
+
+.hero-big-title .highlight {
+  font-weight: 600; /* Просто жирнее */
+  color: #111; /* Чуть темнее */
+}
+
+
+/* Блок About Me */
+.about-block {
+  margin-top: 60px;
+}
+
+/* Заголовок "Обо мне" */
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #111;
+  margin-bottom: 20px;  
+}
+
+/* Описание под "Обо мне" */
+.about-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #555;
+}
+
+/* Фото */
+.hero-photo {
+  height: 100vh;
+  width: auto;
+  object-fit: contain;
+}
