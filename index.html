@@ -32,6 +32,7 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
@@ -103,7 +104,7 @@
       <div class="container">
         <div class="row min-vh-100">
           <!-- Левая часть: ВЕСЬ контент -->
-          <div class="col-lg-6 d-flex flex-column justify-content-between p-5">
+          <div class="col-lg-6 d-flex flex-column p-5">
             <!-- Вверху: Заголовок -->
             <div>
               <h1 class="hero-big-title mb-5">
@@ -112,13 +113,13 @@
                 <span class="highlight custom-lawyer">финансов</span>.
               </h1>
             </div>
-
-            <div class="contact-button">
+            
+            <div class="contact-button mt-auto">
               <a href="https://t.me/lawyer647" class="btn">Консультация</a>
-            </div>
-
+            </div>              
+            
             <!-- Внизу: Блок "Обо мне" -->
-            <div class="about-block">
+            <div class="about-block mt-auto">
               <blockquote class="quote">
                 <span class="quote-icon">“</span>
                 <span class="quote-text">Защита ваших интересов —</br> моя основная задача</span>
@@ -128,7 +129,7 @@
 
           <!-- Правая часть: Фото -->
           <div
-            class="col-lg-6 d-flex justify-content-leftё align-items-end p-0"
+            class="col-lg-6 d-flex justify-content-left align-items-end p-0"
           >
             <img
               src="images/photo2.webp"
@@ -137,50 +138,91 @@
             />
           </div>
         </div>
+
+        <div class="scroll-down">
+          <a href="#stats">
+            <i class="bi bi-chevron-double-down"></i>
+          </a>
+        </div>
+
       </div>
     </section>
 
     <!-- Раздел: направления деятельности -->
-    <section id="stats">
+    <section id="stats" class="py-5 bg-light position-relative">
+
+
+
       <div class="container text-center">
-        <h2 class="mb-5">Защита ваших интересов — моя основная задача</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="counter-box">
-              <div class="counter-header">62 млн руб.</div>
-              <div class="counter-body">
-                <p class="counter-title">
-                  <span class="highlight">сохранено</span> для клиентов за
-                  последние два года
-                </p>
+        <h2 class="mb-5" data-aos="fade-down" data-aos-duration="1000">
+          Достижения в цифрах
+        </h2>
+        <p class="subtitle ">
+          Цифры, подтверждающие мой профессиональный опыт
+        </p>
+    
+        <div class="row justify-content-center">
+          
+          <div class="col-md-4 mb-4 flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front d-flex flex-column">
+                <div class="card-top mt-3">Опыт</div>
+                <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                  <div class="card-middle">10 лет</div>
+                </div>
+                <div class="card-bottom mb-3">юридической практики</div>
+              </div>
+              <div class="flip-card-back">
+                <strong>Опыт</strong>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="counter-box">
-              <div class="counter-header">10 лет</div>
-              <div class="counter-body">
-                <p class="counter-title">
-                  юридической <span class="highlight">практики</span>
-                </p>
+          <div class="col-md-4 mb-4 flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front d-flex flex-column">
+                <div class="card-top mt-3">Практика</div>
+                <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                  <div class="card-middle">более 10 000 </div>
+                </div>
+                <div class="card-bottom mb-3">решенных in-house задач</div>
+              </div>
+              <div class="flip-card-back">
+                <strong>Практика</strong>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="counter-box">
-              <div class="counter-header">10 000</div>
-              <div class="counter-body">
-                <p class="counter-title">
-                  <span class="highlight">решённых</span> in-house задач
-                </p>
+          <div class="col-md-4 mb-4 flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front d-flex flex-column">
+                <div class="card-top mt-3">Результат</div>
+                <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                  <div class="card-middle">62 млн руб.</div>
+                </div>
+                <div class="card-bottom mb-3">сохранил своим доверителям</br>
+                за последние два года</div>
+              </div>
+              <div class="flip-card-back">
+                <strong>Результат</strong>
               </div>
             </div>
           </div>
+       
         </div>
+
+        <blockquote class="quote">
+          <span class="quote-icon">“</span>
+          <span class="quote-text">Каждое дело — подтверждение эффективности моей работы</span>
+        </blockquote>
+
+        <div class="scroll-down">
+          <i class="bi bi-chevron-double-down"></i>
+        </div>
+
       </div>
     </section>
+    
 
     <!-- Раздел: судебная практика -->
     <section id="cases" class="py-5 bg-light">
@@ -284,10 +326,13 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/aos-init.js"></script>
+    <script src="js/flip-cards.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
     <script src="js/swiper-init.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/contact-button.js"></script>
+    <script src="js/scroll-down.js"></script>
   </body>
 </html>
