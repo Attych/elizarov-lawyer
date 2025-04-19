@@ -453,3 +453,34 @@ body {
 .scroll-down a:hover {
   color: inherit; /* При наведении оставить тот же цвет */
 }
+
+#cases {
+  min-height: 100vh; /* 100% от высоты видимой области */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* выравнивание по вертикали */
+}
+
+.custom-footer {
+  font-family: 'Playfair Display', Georgia, serif; /* замените на тот, что у вас используется */
+  font-size: 1.2rem; /* выравнивание размера под основной текст */
+  line-height: 1.5;
+  background-color: #222;
+  color: #fff;
+}
+
+#cases h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #111;
+}
+
+#cases p.subtitle {
+  font-family: 'Playfair Display', serif; /* как заголовок */
+  font-size: 1.5rem; /* крупнее обычного текста */
+  font-weight: 400; /* нормальная толщина */
+  color: #222; /* тёмно-серый, элегантный */
+  line-height: 1.4;
+  margin-top: 1rem;
+}
